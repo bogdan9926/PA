@@ -1,0 +1,30 @@
+Popescu Bogdan
+324CC
+Tema 2 PA
+
+
+	Implementare: Am implementat problemele 2 si 3
+
+	Problema 2:
+		Am folosit algoritmul Bellman Ford pentru a calcula drumul minim,
+	deoarece acesta merge si pentru muchii cu cost negativ. M-am inspirat
+	din algoritmul scris in arhiva cu solutiile oficiale ale laboratorului 9.
+	Am un vector d, de distante de la sursa pana la nod, pe care il relaxez
+	de n - 1 ori. La final, returnez d[destination], distanta optima de la 
+	sursa la destinatie. 
+		Algoritmul are o complexitate de O(n*m).
+
+	Problema 3:
+		Am folosit algoritmul Dijkstra, deoarece are o complexitate mai buna,
+	cantitatea de energie fiind mereu pozitiva. Am folosit un vector in care 
+	retin energia ramasa in fiecare nod si un vector in care retin parintele 
+	nodului. Folosesc un PriorityQueue ordonat dupa procentul de energie 
+	pierduta si un vector in care retin daca un nod a mai fost vizitat. 
+	Verific lista de adiacenta a capului cozii, si daca gasesc o varianta 
+	mai buna, adaug acel nod in coada, ii setez parintele si recalculez 
+	energia ramasa. La final, afisez energia ramasa in nodul n si merg 
+	inapoi pe vectorul de parinti pana ajung la nodul 1, pentru a afisa ruta.
+		Algoritmul are o complexitate de O((n+m)*log n) = O(m*log n)
+	
+
+
